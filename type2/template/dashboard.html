@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to the Dashboard</h2>
+<p>Your role: {{ role }}</p>
+
+{% if role == 'admin' %}
+<a href="{{ url_for('admin_page') }}">Manage Users</a>
+{% elif role == 'staff' %}
+<a href="{{ url_for('courses') }}">Manage Courses</a>
+{% else %}
+<a href="{{ url_for('courses') }}">View Courses</a>
+{% endif %}
+{% endblock %}

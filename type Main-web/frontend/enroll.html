@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Enrollment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Enroll in a Course</h2>
+    <ul id="course-list"></ul>
+    <button onclick="goBack()">Back to Dashboard</button>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadAvailableCourses();
+        });
+    </script>
+</body>
+</html>
